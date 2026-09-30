@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indra Imanuel</title>
+<meta name="description" content="Indra Imanuel — AI researcher in Seoul working on Mixture-of-Experts vision–language models, fine-grained visual understanding, and multimodal document understanding.">
+<meta property="og:title" content="Indra Imanuel">
+<meta property="og:description" content="AI researcher in Seoul. Mixture-of-Experts vision–language models, fine-grained visual understanding, multimodal document understanding.">
+<meta property="og:type" content="profile">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F5F73'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23fff' text-anchor='middle'%3EII%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6F7F5;
+    --panel: #FFFFFF;
+    --ink: #1E2A32;
+    --ink-soft: #4B5A64;
+    --meta: #5B6970;
+    --rule: #D9DEE0;
+    --accent: #1F5F73;
+    --accent-ink: #164A5B;
+    --tag: #E7EEF0;
+    --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #131A1F;
+      --panel: #1A2329;
+      --ink: #E6EAEC;
+      --ink-soft: #B7C1C7;
+      --meta: #8E9BA3;
+      --rule: #2C3940;
+      --accent: #7FC0D4;
+      --accent-ink: #A3D3E2;
+      --tag: #22313A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #131A1F; --panel: #1A2329; --ink: #E6EAEC; --ink-soft: #B7C1C7;
+    --meta: #8E9BA3; --rule: #2C3940; --accent: #7FC0D4; --accent-ink: #A3D3E2; --tag: #22313A;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.6;
+    font-optical-sizing: auto;
+  }
+  a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--accent-ink); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 56px 16px 72px;
+    display: grid;
+    grid-template-columns: 250px minmax(0, 640px);
+    column-gap: 72px;
+    align-items: start;
+  }
+
+  /* ---------- sidebar ---------- */
+  .side { position: sticky; top: 40px; }
+  .side img {
+    width: 150px; height: 150px; object-fit: cover; border-radius: 50%;
+    display: block; margin-bottom: 22px;
+    border: 1px solid var(--rule);
+  }
+  .side h1 {
+    font-size: 30px; line-height: 1.15; font-weight: 600; letter-spacing: -0.01em;
+    margin: 0 0 8px;
+  }
+  .side .role {
+    font-family: var(--sans); font-size: 14px; line-height: 1.5;
+    color: var(--ink-soft); margin: 0 0 26px;
+  }
+  .side .role span { display: block; }
+  .links { list-style: none; padding: 0; margin: 0 0 30px; font-family: var(--sans); font-size: 14.5px; }
+  .links li { padding: 5px 0; border-top: 1px solid var(--rule); }
+  .links li:last-child { border-bottom: 1px solid var(--rule); }
+  .links a { text-decoration: none; display: flex; justify-content: space-between; gap: 12px; }
+  .links a small { color: var(--meta); font-size: 12.5px; }
+  .links a:hover { text-decoration: underline; }
+  .side nav { font-family: var(--sans); font-size: 13.5px; }
+  .side nav a { color: var(--meta); text-decoration: none; display: block; padding: 3px 0; }
+  .side nav a:hover { color: var(--accent); }
+
+  /* ---------- main ---------- */
+  .lede {
+    font-size: 21px; line-height: 1.5; margin: 0 0 14px; font-weight: 400;
+  }
+  .intro p { margin: 0 0 16px; color: var(--ink-soft); }
+  .intro p:last-child { margin-bottom: 0; }
+
+  section { margin-top: 56px; }
+  section h2 {
+    font-family: var(--sans); font-weight: 500; font-size: 14px;
+    color: var(--meta); margin: 0 0 18px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* projects */
+  .project { margin: 0 0 34px; }
+  .project:last-child { margin-bottom: 0; }
+  .project h3 { font-size: 21px; line-height: 1.3; font-weight: 600; margin: 0 0 6px; }
+  .project .status {
+    font-family: var(--sans); font-size: 13.5px; color: var(--meta); margin: 0 0 12px;
+  }
+  .project p { margin: 0 0 10px; }
+  .project .result {
+    background: var(--panel); border-left: 3px solid var(--accent);
+    padding: 12px 16px; margin: 14px 0; font-size: 16px; line-height: 1.55;
+  }
+  .project .result strong { font-weight: 600; }
+  .project .foot { font-family: var(--sans); font-size: 14px; }
+  .project .foot a { margin-right: 18px; }
+
+  /* publications */
+  .pubs { list-style: none; padding: 0; margin: 0; }
+  .pubs li { margin: 0 0 16px; padding-left: 0; font-size: 16px; line-height: 1.55; }
+  .pubs .t { font-weight: 600; }
+  .pubs .v { color: var(--ink-soft); }
+  .pubs .tag {
+    font-family: var(--sans); font-size: 12px; background: var(--tag);
+    padding: 2px 7px; border-radius: 3px; color: var(--ink-soft); white-space: nowrap;
+    margin-left: 6px; vertical-align: 1px;
+  }
+  .pubs .sub { font-family: var(--sans); font-size: 13px; color: var(--meta); margin: 26px 0 12px; }
+
+  /* simple lists */
+  .plain { list-style: none; padding: 0; margin: 0; }
+  .plain li { margin: 0 0 12px; font-size: 16px; line-height: 1.55; }
+  .plain li .when { font-family: var(--sans); font-size: 13px; color: var(--meta); margin-left: 6px; }
+
+  .beyond p { margin: 0 0 14px; font-size: 16px; color: var(--ink-soft); }
+
+  footer {
+    grid-column: 2; margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--rule);
+    font-family: var(--sans); font-size: 13px; color: var(--meta);
+  }
+
+  @media (max-width: 860px) {
+    .page { grid-template-columns: 1fr; padding-top: 36px; column-gap: 0; }
+    .side { position: static; margin-bottom: 40px; }
+    .side img { width: 110px; height: 110px; }
+    .side nav { display: none; }
+    footer { grid-column: 1; }
+    .lede { font-size: 19px; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
+  .skip { position: absolute; left: -999px; top: 8px; background: var(--panel); color: var(--ink);
+          padding: 8px 12px; font-family: var(--sans); font-size: 14px; border: 1px solid var(--rule); z-index: 10; }
+  .skip:focus { left: 16px; }
+
+  figure.fig { margin: 18px 0 6px; }
+  figure.fig img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); background: #fff; }
+  figure.fig figcaption { font-family: var(--sans); font-size: 13px; color: var(--meta); margin-top: 8px; line-height: 1.5; }
+
+  @media print {
+    body { background: #fff; color: #000; font-size: 11pt; }
+    .page { display: block; padding: 0; }
+    .side { position: static; margin-bottom: 18pt; }
+    .side nav, .skip { display: none; }
+    a { color: #000; text-decoration: none; }
+    .project .result { border-left-color: #000; background: #fff; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Indra Imanuel",
+  "jobTitle": "AI Research Engineer",
+  "worksFor": { "@type": "Organization", "name": "Laputa, Inc." },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Dongseo University" },
+    { "@type": "CollegeOrUniversity", "name": "University of Surabaya" }
+  ],
+  "address": { "@type": "PostalAddress", "addressLocality": "Seoul", "addressCountry": "KR" },
+  "email": "mailto:indraimanuel145@gmail.com",
+  "sameAs": [
+    "https://github.com/indraimanuel",
+    "https://www.linkedin.com/in/indra-imanuel/",
+    "https://scholar.google.com/citations?user=TODO"
+  ],
+  "knowsAbout": ["Vision-language models", "Mixture-of-Experts", "Document understanding", "Generative models", "Image restoration"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="page">
+
+  <aside class="side">
+    <!-- Put a square photo named photo.jpg next to this file. Remove the img tag if you don't want one. -->
+    <img src="photo.jpg" alt="Indra Imanuel" onerror="this.style.display='none'">
+    <h1>Indra Imanuel</h1>
+    <p class="role">
+      <span>AI Research Engineer, Laputa</span>
+      <span>Ph.D. Computer Engineering</span>
+      <span>Seoul, South Korea</span>
+    </p>
+    <ul class="links">
+      <li><a href="mailto:indraimanuel145@gmail.com">Email <small>indraimanuel145@gmail.com</small></a></li>
+      <li><a href="https://scholar.google.com/citations?user=TODO">Google Scholar</a></li>
+      <li><a href="https://github.com/indraimanuel">GitHub <small>indraimanuel</small></a></li>
+      <li><a href="https://www.linkedin.com/in/indra-imanuel/">LinkedIn</a></li>
+      <li><a href="cv.pdf">CV <small>PDF</small></a></li>
+    </ul>
+    <nav aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#talks">Talks &amp; teaching</a>
+      <a href="#beyond">Beyond research</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <div class="intro">
+      <p class="lede">
+        I work on making vision–language models see fine detail
+        without making them slower — currently by diagnosing and
+        repairing what goes wrong inside Mixture-of-Experts VLMs.
+      </p>
+      <p>
+        I am an AI research engineer in Seoul, where I build an
+        LLM-based multimodal question-answering system over Korean
+        educational textbooks and lead a research project on document
+        structure recovery that grew out of it. Alongside that, I lead
+        an independent project with two former labmates on
+        training-free repair of fine-grained discrimination failures
+        in MoE vision–language models.
+      </p>
+      <p>
+        Before industry I did a Ph.D. and M.Sc. at Dongseo University
+        (advisor: Prof. Suk-Ho Lee) on generative models for image
+        restoration — diffusion-based demosaicing and compression, and
+        GAN-based super-resolution — and spent a year building
+        real-time computer-vision systems for intelligent CCTV. I am
+        from Surabaya, Indonesia, and have lived in Korea since 2019.
+        I am currently looking for a postdoctoral position.
+      </p>
+    </div>
+
+    <section id="research">
+      <h2>Research</h2>
+
+      <article class="project">
+        <h3>The Calibration Law: diagnosing and repairing answer-position bias in Mixture-of-Experts vision–language models</h3>
+        <p class="status">Independent project, Jan 2026 – present. Manuscript in preparation for ICLR 2027. With two collaborators; I lead the project.</p>
+        <p>
+          MoE vision–language models fail badly at telling apart images
+          that differ in one small detail. On VisMin, five open models
+          (DeepSeek-VL2, MolmoE, ERNIE-4.5-VL; 1B–28B) answer
+          "First" on 94–100% of paired questions regardless of content.
+          We show this answer-position bias is the failure, introduce a
+          zero-cost diagnostic for it (the bias index), and find that
+          training-free interventions — router steering, prompting,
+          logit calibration — succeed exactly in proportion to how
+          close they bring the bias index to 50%.
+        </p>
+        <div class="result">
+          A label-free recipe <strong>triples the VisMin group score
+          (9.0 → 25.8)</strong>, transfers zero-shot to Winoground and
+          ColorSwap, and is carried causally by a single final-layer
+          prefill routing decision. Along the way we found and
+          corrected a scoring artifact in the official VisMin
+          evaluator worth up to +33 group points.
+        </div>
+        <!-- Drop your key figure from the draft here as fig-calibration.png (e.g. the calibration-law plot).
+             The whole figure block hides itself if the file is missing. Edit the caption to match. -->
+        <figure class="fig" id="fig-calibration">
+          <img src="fig-calibration.png" alt="Calibration law: repair success against bias index across five MoE VLMs"
+               onerror="document.getElementById('fig-calibration').style.display='none'">
+          <figcaption>Repair success tracks how close each intervention brings the bias index to 50%, across five MoE VLMs.</figcaption>
+        </figure>
+        <p class="foot">
+          <a href="https://github.com/indraimanuel/vlm-moe-expert-profiling">Code and lab notebook</a>
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>When can a second pass fix document structure? An end-to-end anatomy of hierarchy repair</h3>
+        <p class="status">Laputa, 2026. Manuscript in preparation for ICDAR 2027. I proposed and lead the project.</p>
+        <p>
+          PDF extractors recover text well and document hierarchy
+          poorly. In a pre-registered 18-run study we asked whether a
+          cheap second pass can repair the hierarchy: a self-supervised
+          115M pointer model trained on pseudo-labels mined from section
+          numbering and embedded PDF outlines, with no human annotation,
+          evaluated end-to-end against deterministic rules, a 26B LLM,
+          and the supervised 4B multimodal state of the art on three
+          benchmarks.
+        </p>
+        <div class="result">
+          Deep, unnumbered book hierarchy turns out to be invisible to
+          text-side and crop-level methods alike. But roughly 95% of
+          those books ship outline metadata every published method
+          ignores — and a <strong>zero-label, CPU-only anchoring
+          cascade matches the 4B model in the hardest regime at about
+          1/500th of its inference cost.</strong>
+        </div>
+      </article>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul class="pubs">
+        <li>
+          <span class="t">Optimized Color Filter Array for Denoising Diffusion Null-Space Model-Based Demosaicing.</span>
+          I. Imanuel, H. Yang, S. Lee.
+          <span class="v">IEEE Access, 12, 2024.</span>
+          <a href="https://doi.org/10.1109/ACCESS.2024.3448451">doi</a>
+          <span class="tag">SCIE</span>
+        </li>
+        <li>
+          <span class="t">Denoising Diffusion Null-Space Model and Colorization based Image Compression.</span>
+          I. Imanuel, D. Kang, S. Lee.
+          <span class="v">International Journal of Internet, Broadcasting and Communication, 16(2), 2024.</span>
+          <span class="tag">KCI</span>
+        </li>
+        <li>
+          <span class="t">Demosaicing based Image Compression with Channel-wise Decoder.</span>
+          I. Imanuel, S. Lee.
+          <span class="v">International Journal of Internet, Broadcasting and Communication, 15(4), 2023.</span>
+          <span class="tag">KCI</span>
+        </li>
+        <li>
+          <span class="t">Image Compression with Channel-wise Decoder.</span>
+          I. Imanuel, S. Lee.
+          <span class="v">IEEE ICCE-Asia, 2022.</span>
+          <a href="https://doi.org/10.1109/ICCE-Asia57006.2022.9954761">doi</a>
+          <span class="tag">Best Paper, Silver Prize</span>
+        </li>
+        <li>
+          <span class="t">Super-resolution with adversarial loss on the feature maps of the generated high-resolution image.</span>
+          I. Imanuel, S. Lee.
+          <span class="v">Electronics Letters, 58, 2022.</span>
+          <a href="https://doi.org/10.1049/ell2.12360">doi</a>
+          <span class="tag">SCIE</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="talks">
+      <h2>Talks &amp; teaching</h2>
+      <ul class="plain">
+        <li>Guest lecture, “Vision–Language Models: Trends, Applications, and Implementation,” Indonesian undergraduate webinar (ProjekinAja).<span class="when">Nov 2025</span></li>
+        <li>Speaker, International Symposium on Management (INSYMA), University of Surabaya and Ho Chi Minh University of Banking — AI applications and data-generation trends.<span class="when">May 2025</span></li>
+        <li>Guest lecture for graduate students, Department of Informatics, University of Surabaya — computer vision and image generation (CNNs, GANs, diffusion).<span class="when">Sep 2024</span></li>
+        <li>Teaching assistant, Department of Informatics, University of Surabaya — Algorithms &amp; Programming, Web Design, Web Programming.<span class="when">2016 – 2018</span></li>
+      </ul>
+    </section>
+
+    <section id="beyond" class="beyond">
+      <h2>Beyond research</h2>
+      <p>
+        In 2021 I spent a summer as a field surveyor and translator for a
+        Hansung University study on the working and living conditions of
+        Indonesian and East Timorese laborers on remote Korean islands
+        (Gaeya, Bogil, Nohwa), interviewing workers and co-writing the
+        reports.
+      </p>
+      <p>
+        During graduate school I built an interactive physics learning
+        app for Indonesian high-school students as part of a volunteer
+        education program, and ran a YouTube channel about
+        international student life in Korea — scripting, filming, and
+        editing everything myself.
+      </p>
+      <p>
+        I speak Indonesian (native), English (IELTS 8.0), and Korean
+        (KIIP Level 5).
+      </p>
+    </section>
+  </main>
+
+  <footer>Last updated September 2026.</footer>
+</div>
+</body>
+</html>
