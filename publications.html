@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications — Indra Imanuel</title>
+<meta name="description" content="Publications and manuscripts in preparation by Indra Imanuel.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F5F73'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23fff' text-anchor='middle'%3EII%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="index.html">Indra Imanuel</a>
+  <nav aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="publications.html" aria-current="page">Publications</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog &amp; Videos</a>
+    <a href="cv.pdf">CV</a>
+  </nav>
+</header>
+
+<main id="main">
+  <h1 class="page">Publications</h1>
+  <p class="page-intro">All first-author. Journal venues are labeled by index; two manuscripts are in preparation.</p>
+
+  <section>
+    <h2>Manuscripts in preparation</h2>
+
+    <article class="pub">
+      <figure><img src="img/pub-calibration.png" alt="" onerror="this.parentElement.style.display='none'; this.closest('.pub').classList.add('nothumb')"></figure>
+      <div>
+        <h3>The Calibration Law: Diagnosing and Repairing Answer-Position Bias in Mixture-of-Experts Vision-Language Models</h3>
+        <p class="authors"><b>Indra Imanuel</b>, et al.</p>
+        <p class="venue">In preparation for ICML 2027 · independent project; I lead the project</p>
+        <p class="abstract">
+          MoE vision–language models fail badly at fine-grained visual
+          discrimination. On the VisMin benchmark we show the underlying
+          failure is a severe answer-position bias, introduce a zero-cost
+          diagnostic (the bias index) that tracks capability across eight
+          open MoE VLMs, and establish a "calibration law": training-free
+          interventions — router steering, prompting, output-logit
+          calibration — succeed in proportion to how well they calibrate
+          the bias. A label-free recipe greatly improves the overall VisMin
+          group score and transfers zero-shot to Winoground and ColorSwap;
+          causal analysis localizes the repair to final-layer prefill
+          routing.
+        </p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <figure><img src="img/pub-hierarchy.png" alt="" onerror="this.parentElement.style.display='none'; this.closest('.pub').classList.add('nothumb')"></figure>
+      <div>
+        <h3>When Can a Second Pass Fix Document Structure? An End-to-End Anatomy of Hierarchy Repair</h3>
+        <p class="authors"><b>Indra Imanuel</b>, et al.</p>
+        <p class="venue">In preparation for ICDAR 2027 · Laputa, Inc.; I proposed and lead the project</p>
+        <p class="abstract">
+          PDF extractors recover text well and document hierarchy poorly.
+          We ask whether a cheap second
+          pass can repair it: a self-supervised 115M pointer model trained
+          on pseudo-labels mined from section numbering and embedded PDF
+          outlines — no human annotation — evaluated end-to-end against
+          deterministic rules, a 26B LLM, and the supervised 4B multimodal
+          state of the art on three benchmarks. Preliminary results show
+          that deep, unnumbered book hierarchy is largely invisible to
+          text-side and crop-level methods alike, and point to cheap
+          structural signals as the more promising route than larger
+          models.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Journal and conference papers</h2>
+
+    <article class="pub">
+      <figure><img src="img/pub-cfa.png" alt="" onerror="this.parentElement.style.display='none'; this.closest('.pub').classList.add('nothumb')"></figure>
+      <div>
+        <h3>Optimized Color Filter Array for Denoising Diffusion Null-Space Model-Based Demosaicing</h3>
+        <p class="authors"><b>Indra Imanuel</b>, Hyunho Yang, Suk-Ho Lee</p>
+        <p class="venue">IEEE Access, vol. 12, pp. 117335–117344, 2024 <span class="tag">SCIE, Scopus Q1</span></p>
+        <p class="links"><a href="https://doi.org/10.1109/ACCESS.2024.3448451">Paper</a></p>
+      </div>
+    </article>
+
+    <article class="pub nothumb">
+      <div>
+        <h3>Denoising Diffusion Null-Space Model and Colorization based Image Compression</h3>
+        <p class="authors"><b>Indra Imanuel</b>, Dongyoung Kang, Suk-Ho Lee</p>
+        <p class="venue">International Journal of Internet, Broadcasting and Communication, 16(2), pp. 22–30, 2024 <span class="tag">KCI</span></p>
+      </div>
+    </article>
+
+    <article class="pub nothumb">
+      <div>
+        <h3>Demosaicing based Image Compression with Channel-wise Decoder</h3>
+        <p class="authors"><b>Indra Imanuel</b>, Suk-Ho Lee</p>
+        <p class="venue">International Journal of Internet, Broadcasting and Communication, 15(4), pp. 74–83, 2023 <span class="tag">KCI</span></p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <figure><img src="img/pub-icce.png" alt="" onerror="this.parentElement.style.display='none'; this.closest('.pub').classList.add('nothumb')"></figure>
+      <div>
+        <h3>Image Compression with Channel-wise Decoder</h3>
+        <p class="authors"><b>Indra Imanuel</b>, Suk-Ho Lee</p>
+        <p class="venue">IEEE International Conference on Consumer Electronics-Asia (ICCE-Asia), Yeosu, 2022 <span class="tag">Best Paper Award, Silver Prize</span></p>
+        <p class="links"><a href="https://doi.org/10.1109/ICCE-Asia57006.2022.9954761">Paper</a></p>
+      </div>
+    </article>
+
+    <article class="pub">
+      <figure><img src="img/pub-sr.png" alt="" onerror="this.parentElement.style.display='none'; this.closest('.pub').classList.add('nothumb')"></figure>
+      <div>
+        <h3>Super-resolution with adversarial loss on the feature maps of the generated high-resolution image</h3>
+        <p class="authors"><b>Indra Imanuel</b>, Suk-Ho Lee</p>
+        <p class="venue">Electronics Letters, vol. 58, pp. 47–49, 2022 <span class="tag">SCIE, Scopus Q2</span></p>
+        <p class="abstract">A GAN training scheme that applies adversarial loss on feature maps of the generated high-resolution image via pre-trained networks; outperformed the state-of-the-art CVPR method on a real-world low-resolution benchmark at the time of publication.</p>
+        <p class="links"><a href="https://doi.org/10.1049/ell2.12360">Paper</a></p>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Theses</h2>
+    <ul class="plain">
+      <li><b>Ph.D.</b> — Image Compression and Demosaicing based on Denoising Diffusion Null-Space Model. Dongseo University, 2024. Advisor: Prof. Suk-Ho Lee.</li>
+      <li><b>M.Sc.</b> — Super-Resolution with Adversarial Loss on the Feature Maps of the Generated High-Resolution Image. Dongseo University, 2021. Advisor: Prof. Suk-Ho Lee.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="bottom">
+  <span>© 2026 Indra Imanuel</span>
+  <span>Last updated October 2026</span>
+</footer>
+</body>
+</html>

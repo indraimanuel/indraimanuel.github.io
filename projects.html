@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Indra Imanuel</title>
+<meta name="description" content="Research, industry, and software projects by Indra Imanuel.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231F5F73'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='%23fff' text-anchor='middle'%3EII%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="index.html">Indra Imanuel</a>
+  <nav aria-label="Main">
+    <a href="index.html">Home</a>
+    <a href="publications.html">Publications</a>
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog &amp; Videos</a>
+    <a href="cv.pdf">CV</a>
+  </nav>
+</header>
+
+<main id="main">
+  <h1 class="page">Projects</h1>
+  <p class="page-intro">Research projects, production systems I built in industry, lab work during graduate school, and the coursework and apps that came before. Papers are on the <a href="publications.html">publications</a> page.</p>
+
+  <section id="research">
+    <h2>Research</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Answer-position bias in MoE vision–language models</h3>
+        <p class="when">Independent project · Jan 2026 – present</p>
+        <p>Training-free diagnosis and repair of fine-grained discrimination failures in eight open MoE VLMs. A zero-cost diagnostic (the bias index), a "calibration law" for interventions, and causal localization of the repair to final-layer prefill routing.</p>
+        <div class="stack"><span>MoE</span><span>VLM</span><span>VisMin</span><span>PyTorch</span></div>
+        <p class="links"><a href="publications.html">Paper (in prep.)</a></p>
+      </div>
+      <div class="card">
+        <h3>Second-pass document-hierarchy repair</h3>
+        <p class="when">Laputa · 2026</p>
+        <p>Repairing the hierarchy PDF extractors get wrong: a self-supervised 115M pointer model trained without human annotation, benchmarked end-to-end against rules, a 26B LLM, and the supervised 4B multimodal state of the art on three benchmarks.</p>
+        <div class="stack"><span>Document AI</span><span>Self-supervision</span><span>RAG</span></div>
+        <p class="links"><a href="publications.html">Paper (in prep.)</a></p>
+      </div>
+      <div class="card">
+        <h3>Diffusion-based demosaicing and compression</h3>
+        <p class="when">Ph.D. thesis · 2021 – 2024</p>
+        <p>Image demosaicing and compression with a denoising diffusion null-space model; a learned color-filter-array pattern and a CFA optimization scheme for jointly optimal image quality and compression rate.</p>
+        <div class="stack"><span>Diffusion</span><span>Image restoration</span></div>
+        <p class="links"><a href="https://doi.org/10.1109/ACCESS.2024.3448451">IEEE Access</a></p>
+      </div>
+      <div class="card">
+        <h3>GAN super-resolution with feature-map adversarial loss</h3>
+        <p class="when">M.Sc. thesis · 2019 – 2021</p>
+        <p>A training scheme that applies adversarial loss on the feature maps of the generated high-resolution image; outperformed the state-of-the-art CVPR method on a real-world benchmark at the time.</p>
+        <div class="stack"><span>GAN</span><span>Super-resolution</span></div>
+        <p class="links"><a href="https://doi.org/10.1049/ell2.12360">Electronics Letters</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="industry">
+    <h2>Industry systems</h2>
+    <p class="group-note">Production work at STANS (intelligent CCTV) and Laputa (education technology).</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Multimodal textbook Q&amp;A system</h3>
+        <p class="when">Laputa · Dec 2025 – present</p>
+        <p>LLM-based RAG and agentic workflow around a 26B VLM MoE model over Korean educational textbooks. As one of a two-person AI team I redesigned the retrieval pipeline and its database, benchmarked and quantized local LLMs, and own the cloud-GPU deployment stack (RunPod, custom Docker images, EC2).</p>
+        <div class="stack"><span>vLLM</span><span>Qdrant</span><span>Unsloth</span><span>Docker</span><span>RunPod</span></div>
+      </div>
+      <div class="card">
+        <h3>Crowd-density detection for Seoul metro</h3>
+        <p class="when">STANS · 2024 – 2025</p>
+        <p>Real-time people counting to prevent overcrowding; fine-tuned P2PNet on company data, built the auto-labeling pipeline and annotation guidelines. Deployed across Seoul subway stations and other public areas.</p>
+        <div class="stack"><span>P2PNet</span><span>TensorRT</span><span>ONNX</span></div>
+      </div>
+      <div class="card">
+        <h3>Object detection for intelligent CCTV</h3>
+        <p class="when">STANS · 2024 – 2025</p>
+        <p>YOLO-family detectors fine-tuned on company datasets including LiDAR-camera data, quantized for real-time inference; deployed in the same Seoul metro systems. Also rule-based intrusion and loitering detection.</p>
+        <div class="stack"><span>YOLO</span><span>TensorRT</span><span>MLOps</span></div>
+      </div>
+      <div class="card">
+        <h3>School violence detection</h3>
+        <p class="when">STANS · 2025</p>
+        <p>Surveyed action-recognition models for deployability, then reimplemented SlowOnly and an optical-flow/frame-difference model in PyTorch, integrated them with YOLOv11, quantized, and prepared the system for KISA (Korea Internet &amp; Security Agency) school-safety certification evaluation.</p>
+        <div class="stack"><span>SlowOnly</span><span>Optical flow</span><span>YOLOv11</span></div>
+      </div>
+      <div class="card">
+        <h3>Construction-site real-time translation</h3>
+        <p class="when">STANS · 2025</p>
+        <p>Early-stage R&amp;D for translating Korean construction jargon across multiple Asian languages: speech-to-text, neural machine translation, TTS, and LLM fine-tuning with RAG. My first LLM development work.</p>
+        <div class="stack"><span>STT</span><span>NMT</span><span>LLM</span><span>RAG</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="lab">
+    <h2>Graduate-school lab projects</h2>
+    <p class="group-note">Work at the Image Processing Lab, Dongseo University, beyond my thesis research.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>DeepView multi-plane view synthesis for ETRI</h3>
+        <p class="when">Commissioned project · Dongseo</p>
+        <p>Reviewed and reimplemented <em>DeepView: View synthesis with learned gradient descent</em> for ETRI: learned gradient descent and multi-plane images for depth-based view synthesis, with reports and presentations to the institute.</p>
+        <div class="stack"><span>View synthesis</span><span>MPI</span><span>PyTorch</span></div>
+      </div>
+      <div class="card">
+        <h3>Blood-vessel segmentation</h3>
+        <p class="when">Lab project</p>
+        <p>U-Net segmentation on a real medical image dataset, with data augmentation to compensate for the small amount of labeled data.</p>
+        <div class="stack"><span>U-Net</span><span>Medical imaging</span></div>
+      </div>
+      <div class="card">
+        <h3>Crowd counting with CSRNet</h3>
+        <p class="when">Lab project</p>
+        <p>Implementation and experiments with CSRNet for density-map crowd counting — the first of several crowd-counting systems I would later build in industry.</p>
+        <div class="stack"><span>CSRNet</span><span>Crowd counting</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="coursework">
+    <h2>Class projects</h2>
+    <p class="group-note">Coursework during my M.Sc. and Ph.D. — paper reviews, implementations, and write-ups rather than new methods, but each came with a project paper and presentation I'm still fond of.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Deep Q-Network on Sonic the Hedgehog 2</h3>
+        <p class="when">Reinforcement learning</p>
+        <p>DQN agent trained to play Sonic 2; I was later invited back to demonstrate it to the following semester's class.</p>
+        <div class="stack"><span>DQN</span><span>RL</span></div>
+      </div>
+      <div class="card">
+        <h3>Fooling a person re-identification model</h3>
+        <p class="when">Computer vision</p>
+        <p>Adversarial masking of face regions to study how re-ID models fail — an early brush with the fine-grained robustness questions I work on now.</p>
+        <div class="stack"><span>Re-ID</span><span>Adversarial</span></div>
+      </div>
+      <div class="card">
+        <h3>Deep learning for efficient network routing</h3>
+        <p class="when">Computer networks</p>
+        <p>Applying deep learning models to routing decisions in computer networks.</p>
+        <div class="stack"><span>Deep learning</span><span>Networking</span></div>
+      </div>
+      <div class="card">
+        <h3>Genetic algorithm for the travelling salesman problem</h3>
+        <p class="when">Optimization</p>
+        <p>Experiments with a proposed genetic-algorithm variant on TSP instances.</p>
+        <div class="stack"><span>Genetic algorithms</span></div>
+      </div>
+      <div class="card">
+        <h3>Curve interpolation from scratch</h3>
+        <p class="when">Computer graphics</p>
+        <p>Lagrange, Bézier, and cubic Hermite curve implementations.</p>
+        <div class="stack"><span>Graphics</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apps">
+    <h2>Apps &amp; web</h2>
+    <p class="group-note">Software I built before and around graduate school.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Physics learning app for high-school students</h3>
+        <p class="when">Volunteer program · Indonesia</p>
+        <p>An interactive physics learning app built as part of a social-service program to improve education quality in Indonesia.</p>
+        <div class="stack"><span>Unity</span><span>C#</span></div>
+      </div>
+      <div class="card">
+        <h3>Android chat application</h3>
+        <p class="when">PT. Mat Ali Teknologi · 2019</p>
+        <p>A messaging app in the style of KakaoTalk or WhatsApp, built in a small team.</p>
+        <div class="stack"><span>Kotlin</span><span>Android Studio</span><span>Node.js</span></div>
+      </div>
+      <div class="card">
+        <h3>Mobile quality-control system for an aluminium company</h3>
+        <p class="when">Freelance</p>
+        <p>A lightweight hybrid mobile app (Android and iOS) for aluminium storage and quality-control management.</p>
+        <div class="stack"><span>Framework7</span><span>Cordova</span><span>JavaScript</span></div>
+      </div>
+      <div class="card">
+        <h3>Multi-branch procurement system for a property agency</h3>
+        <p class="when">Freelance</p>
+        <p>Web system for managing real-estate property and agent data across branches.</p>
+        <div class="stack"><span>CodeIgniter</span><span>PHP</span><span>MySQL</span></div>
+      </div>
+      <div class="card">
+        <h3>Committee management system</h3>
+        <p class="when">Bachelor thesis · University of Surabaya</p>
+        <p>Web app for the Department of Informatics' event committees: task tracking, team performance evaluation, and document management.</p>
+        <div class="stack"><span>CodeIgniter</span><span>PHP</span><span>JavaScript</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bottom">
+  <span>© 2026 Indra Imanuel</span>
+  <span>Last updated October 2026</span>
+</footer>
+</body>
+</html>
