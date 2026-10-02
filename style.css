@@ -56,6 +56,14 @@ header.top nav { display: flex; gap: 22px; font-size: 15px; align-items: center;
 header.top nav a { color: var(--ink-soft); text-decoration: none; padding-bottom: 3px; border-bottom: 1px solid transparent; }
 header.top nav a:hover { color: var(--accent); }
 header.top nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--ink); }
+.lang-toggle {
+  font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.02em;
+  color: var(--ink-soft); text-decoration: none; border: 1px solid var(--rule); border-radius: 999px;
+  padding: 6px 10px; line-height: 1; margin-left: 10px; background: var(--panel);
+}
+.lang-toggle:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+html[lang="ko"] body { font-family: "Noto Serif KR", var(--serif); }
+html[lang="ko"] .hero h1, html[lang="ko"] h1.page { letter-spacing: 0; }
 .theme-toggle {
   appearance: none; background: var(--panel); border: 1px solid var(--rule); color: var(--ink-soft);
   border-radius: 999px; width: 34px; height: 34px; cursor: pointer; display: inline-flex;
