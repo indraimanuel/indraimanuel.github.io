@@ -58,14 +58,13 @@
         <p class="abstract">
           MoE 비전–언어 모델은 미세한 시각적 구분에 크게 실패합니다. VisMin
           벤치마크에서 그 근본 원인이 심각한 답변 위치 편향(answer-position
-          bias)임을 보이고, 8개의 공개 MoE VLM에서 성능을 추적하는 비용이 들지
-          않는 진단 지표(bias index)를 제안했으며, "calibration law"를
-          정립했습니다: 학습 없이 적용하는 개입(router steering, 프롬프팅,
+          bias)임을 보이고, 비용이 들지 않는 진단 지표(bias index)를 제안했으며, 8개의 공개 MoE
+          VLM에서 "calibration law"를 정립했습니다: 학습 없이 적용하는 개입(router steering, 프롬프팅,
           출력 로짓 보정)의 성공 여부는 이 편향을 얼마나 잘 보정하느냐에
           비례합니다. 레이블 없이 적용 가능한 레시피로 VisMin 전체 그룹 점수를
           크게 개선했고, 이 효과는 Winoground와 ColorSwap에도 제로샷으로
-          전이됩니다. 인과 분석 결과 이 교정 효과는 마지막 레이어의 prefill
-          routing에서 비롯됩니다.
+          전이됩니다. 인과 분석 결과 router steering의 교정 효과는 마지막 레이어의
+          prefill routing에서 비롯됩니다.
         </p>
       </div>
     </article>

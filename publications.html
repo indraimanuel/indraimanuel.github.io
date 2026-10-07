@@ -70,13 +70,13 @@
           MoE vision–language models fail badly at fine-grained visual
           discrimination. On the VisMin benchmark we show the underlying
           failure is a severe answer-position bias, introduce a zero-cost
-          diagnostic (the bias index) that tracks capability across eight
-          open MoE VLMs, and establish a "calibration law": training-free
+          diagnostic (the bias index), and establish, across eight open MoE
+          VLMs, a "calibration law": training-free
           interventions — router steering, prompting, output-logit
           calibration — succeed in proportion to how well they calibrate
           the bias. A label-free recipe greatly improves the overall VisMin
           group score and transfers zero-shot to Winoground and ColorSwap;
-          causal analysis localizes the repair to final-layer prefill
+          causal analysis localizes the steering repair to final-layer prefill
           routing.
         </p>
       </div>
