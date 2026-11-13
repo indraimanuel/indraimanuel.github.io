@@ -58,7 +58,7 @@
       <p>
         Laputa에서는 한국 대학 교재를 대상으로 하는 Unibook의 LLM 기반 멀티모달
         Q&amp;A 시스템을 개발하고 있으며, 그 과정에서 출발한 문서 계층 구조 복원
-        연구 프로젝트를 이끌고 있습니다. 그 전에는 STANS에서 1년간 지능형 CCTV를
+        연구 프로젝트를 이끌고 있습니다. 그 전에는 STANS에서 1년여간 지능형 CCTV를
         위한 실시간 컴퓨터 비전 모델을 개발했고, 이 모델들은 현재 서울 지하철
         역사에서 운영되고 있습니다. 그보다 앞서 동서대학교에서 이석호 교수님의
         지도로 영상 복원을 위한 생성 모델을 주제로 석사와 박사 과정을 마쳤습니다.
@@ -92,8 +92,8 @@
   <section id="news">
     <h2>소식</h2>
     <ul class="news">
-      <li><time>2026년 9월</time><span>제1저자 논문 두 편 준비 중: MoE VLM의 답변 위치 편향(answer-position bias)에 관한 논문(ICML 2027 목표)과 2차 패스 문서 계층 구조 복원에 관한 논문(ICDAR 2027 목표).</span></li>
-      <li><time>2026년 1월</time><span>대학원 연구실 동료 두 명과 함께 MoE 비전–언어 모델의 expert routing과 미세한 시각적 구분에 관한 독립 연구 프로젝트 시작.</span></li>
+      <li><time>2026년 9월</time><span>제1저자 논문 두 편 준비 중: MoE VLM의 답변 위치 편향(answer-position bias)에 관한 논문(ICML 2027 목표)과 문서 계층 구조의 2차 보정에 관한 논문(ICDAR 2027 목표).</span></li>
+      <li><time>2026년 1월</time><span>대학원 연구실 동료 두 명과 함께 MoE 비전–언어 모델의 expert routing과 미세한 시각적 구분에 관한 개인 연구 프로젝트 시작.</span></li>
       <li><time>2025년 12월</time><span>교육·학술 출판사 사회평론의 AI 자회사인 Laputa, Inc.(서울)에 AI Research Engineer로 입사. 한국 대학 교재를 대상으로 하는 LLM 기반 멀티모달 Q&amp;A 시스템 개발.</span></li>
       <li><time>2025년 11월</time><span>인도네시아 학부생 대상 웨비나(ProjekinAja)에서 비전–언어 모델의 동향·활용·구현을 주제로 초청 강의.</span></li>
       <li><time>2025년 5월</time><span>International Symposium on Management 2025(University of Surabaya × Ho Chi Minh University of Banking)에서 AI 활용과 데이터 생성에 관해 발표.</span></li>
@@ -102,7 +102,7 @@
       <li><time>2024년 8월</time><span>동서대학교에서 컴퓨터공학 박사 학위 취득. 학위논문: <em>Image Compression and Demosaicing based on Denoising Diffusion Null-Space Model</em>.</span></li>
       <li><time>2024년 8월</time><span>디퓨전 기반 디모자이킹을 위한 최적화된 컬러 필터 어레이에 관한 논문이 <em>IEEE Access</em>에 게재.</span></li>
       <li><time>2023년 12월</time><span>채널별 디코더를 이용한 디모자이킹 기반 영상 압축에 관한 논문이 <em>International Journal of Internet, Broadcasting and Communication</em>에 게재.</span></li>
-      <li><time>2022년 10월</time><span>IEEE ICCE-Asia 2022에서 <em>Image Compression with Channel-wise Decoder</em>로 최우수 논문상(은상) 수상.</span></li>
+      <li><time>2022년 10월</time><span>IEEE ICCE-Asia 2022에서 <em>Image Compression with Channel-wise Decoder</em>로 Best Paper Award (Silver Prize) 수상.</span></li>
     </ul>
   </section>
 
@@ -114,15 +114,13 @@
       <div>
         <h3>The Calibration Law: Diagnosing and Repairing Answer-Position Bias in Mixture-of-Experts Vision-Language Models</h3>
         <p class="authors"><b>Indra Imanuel</b> 외</p>
-        <p class="venue">논문 준비 중 (ICML 2027 목표) · 독립 연구 프로젝트, 2026년 1월 – 현재</p>
+        <p class="venue">논문 준비 중 (ICML 2027 목표) · 개인 연구 프로젝트, 2026년 1월 – 현재</p>
         <p class="abstract">
-          MoE 비전–언어 모델은 아주 작은 차이만 있는 두 이미지를 구분하는 데
-          크게 실패합니다. 저희는 이 실패의 상당 부분이 심각한 답변 위치
-          편향(answer-position bias)에서 비롯됨을 보이고, 이를 측정하는 비용이 들지 않는
-          진단 지표를 제안했으며, 8개의 공개 MoE VLM에서 학습 없이
-          적용하는 개입(training-free intervention)의 성공 여부가 이 편향을
+          MoE 비전–언어 모델은 아주 작은 차이만 있는 두 이미지를 구분하지 못하는 경우가 많습니다. 저희는 이 실패의 상당 부분이 심각한 답변 위치
+          편향(answer-position bias)에서 비롯됨을 보이고, 이를 추가 비용 없이 측정할 수 있는 진단 지표를 제안했으며, 8개의 공개 MoE VLM에서 학습 없이
+          적용하는 개입(training-free intervention)의 효과가 이 편향을
           얼마나 잘 보정하느냐에 비례함을 확인했습니다. 레이블 없이
-          적용 가능한 레시피로 VisMin 그룹 점수를 크게 개선했고, 이 효과는
+          적용 가능한 방법으로 VisMin 그룹 점수를 크게 개선했고, 이 효과는
           Winoground와 ColorSwap에도 제로샷으로 전이됩니다.
         </p>
       </div>
@@ -135,9 +133,8 @@
         <p class="authors"><b>Indra Imanuel</b> 외</p>
         <p class="venue">논문 준비 중 (ICDAR 2027 목표) · Laputa, 2026</p>
         <p class="abstract">
-          PDF 추출기가 놓치는 문서 계층 구조를 가벼운 2차 패스로 복원할 수
-          있을까요? 사람의 주석 없이 학습한 1억 1,500만 파라미터 규모의
-          자기지도 포인터 모델을 결정론적 규칙, 26B LLM, 그리고 지도학습
+          PDF 추출기가 놓치는 문서 계층 구조를 가벼운 2차 보정 단계로 복원할 수 있을까요? 사람이 만든 레이블 없이 학습한 1억 1,500만 파라미터 규모의
+          자기지도 포인터 모델을 규칙 기반 방법, 26B LLM, 그리고 지도학습
           기반 4B 멀티모달 SOTA와 세 가지 벤치마크에서 엔드투엔드로
           비교했습니다. 예비 결과에 따르면 번호가 없는 깊은 단행본 계층 구조는
           텍스트 기반 방법과 크롭 단위 시각 방법 모두에서 거의 포착되지
@@ -167,7 +164,7 @@
         <p class="authors"><b>Indra Imanuel</b>, Suk-Ho Lee</p>
         <p class="venue">Electronics Letters, 2022 <span class="tag">SCIE</span> · 석사 학위 연구</p>
         <p class="abstract">
-          픽셀 공간뿐 아니라 사전학습 네트워크의 피처 맵 위에서 적대적
+          픽셀 공간뿐 아니라 사전학습 네트워크의 피처 맵에 적대적
           손실(adversarial loss)을 적용하는 GAN 학습 기법입니다. 기존 GAN 기반
           초해상도 방법을 개선했으며, 발표 당시 실제 저해상도 영상 벤치마크에서
           최신 CVPR 방법을 능가했습니다.
@@ -182,7 +179,7 @@
       <div class="card">
         <h3>Unibook: 멀티모달 교재 Q&amp;A 시스템</h3>
         <p class="when">Laputa · 2025 – 현재</p>
-        <p>한국 대학 교재를 대상으로 26B VLM MoE 모델을 중심에 둔 LLM 기반 RAG 및 agentic workflow. agentic workflow와 검색 파이프라인, 데이터베이스를 재설계하고, 로컬 LLM을 벤치마크·양자화했으며, 클라우드 GPU 배포 스택을 담당하고 있습니다.</p>
+        <p>한국 대학 교재를 대상으로 26B MoE VLM을 중심에 둔 LLM 기반 RAG 및 에이전트 워크플로. 에이전트 워크플로와 검색 파이프라인, 데이터베이스를 재설계하고, 로컬 LLM을 벤치마크·양자화했으며, 클라우드 GPU 배포 스택을 담당하고 있습니다.</p>
         <div class="stack"><span>LLM</span><span>RAG</span><span>Agentic workflow</span><span>vLLM</span><span>Qdrant</span><span>Docker</span></div>
       </div>
       <div class="card">
@@ -206,7 +203,7 @@
       <div class="card">
         <h3>피처 맵 적대적 손실을 이용한 GAN 초해상도</h3>
         <p class="when">석사 학위논문 · 2019 – 2021</p>
-        <p>사전학습 네트워크의 피처 맵 위에서 적대적 손실을 적용하는 학습 기법. 발표 당시 실제 저해상도 영상 벤치마크에서 최신 CVPR 방법을 능가했습니다.</p>
+        <p>사전학습 네트워크의 피처 맵에 적대적 손실을 적용하는 학습 기법. 발표 당시 실제 저해상도 영상 벤치마크에서 최신 CVPR 방법을 능가했습니다.</p>
         <div class="stack"><span>GAN</span><span>Super-resolution</span><span>Image restoration</span></div>
       </div>
       <div class="card">
@@ -221,9 +218,9 @@
   <section id="experience">
     <h2>경력</h2>
     <ul class="exp">
-      <li><time>2025 – 현재</time><div><b>AI Research Engineer</b>, Laputa, Inc. (사회평론 AI 자회사), 서울<br><span class="sub">LLM 연구, 26B VLM MoE 모델 기반 RAG 및 agentic workflow, 데이터베이스, 클라우드 GPU 인프라 담당. 문서 계층 구조 복원 연구 프로젝트 리드.</span></div></li>
+      <li><time>2025 – 현재</time><div><b>AI Research Engineer</b>, Laputa, Inc. (사회평론 AI 자회사), 서울<br><span class="sub">LLM 연구, 26B MoE VLM 기반 RAG 및 에이전트 워크플로, 데이터베이스, 클라우드 GPU 인프라 담당. 문서 계층 구조 복원 연구 프로젝트 주도.</span></div></li>
       <li><time>2024 – 2025</time><div><b>AI Research Engineer</b>, STANS, Inc. (MDS Intelligence 자회사), 서울<br><span class="sub">지능형 CCTV용 컴퓨터 비전 모델(객체 탐지, 군중 계수, 폭력 감지), 자동 레이블링 파이프라인, 양자화 및 배포.</span></div></li>
-      <li><time>2019 – 2024</time><div><b>대학원 연구원</b>, 영상처리연구실, 동서대학교, 부산<br><span class="sub">지도교수: 이석호 교수. 영상 복원을 위한 생성 모델 연구, 제1저자 논문 5편, NRF·ETRI·동서대학교 연구비 지원.</span></div></li>
+      <li><time>2019 – 2024</time><div><b>대학원 연구원</b>, 영상처리연구실, 동서대학교, 부산<br><span class="sub">지도교수: 이석호 교수. 영상 복원을 위한 생성 모델 연구, 제1저자 논문 5편, 한국연구재단(NRF)·ETRI·동서대학교 연구비 지원.</span></div></li>
       <li><time>2019</time><div><b>Android 앱 개발자</b>, PT. Mat Ali Teknologi, 수라바야<br><span class="sub">Android 채팅 애플리케이션 (Kotlin, Node.js).</span></div></li>
     </ul>
   </section>
