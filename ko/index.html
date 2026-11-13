@@ -46,7 +46,7 @@
 
   <div class="hero">
     <div>
-      <h1>Indra Imanuel <span style="font-weight:400;font-size:0.6em;color:var(--meta)">인드라 임마누엘</span></h1>
+      <h1>Indra Imanuel <span style="font-weight:400;font-size:0.6em;color:var(--meta)">임마누엘 인드라</span></h1>
       <p class="role">Laputa AI Research Engineer, 서울 &nbsp;·&nbsp; 컴퓨터공학 박사</p>
       <p>
         안녕하세요! 서울에서 활동하는 AI 연구자이자 엔지니어 인드라입니다.
@@ -59,8 +59,7 @@
         Laputa에서는 한국 대학 교재를 대상으로 하는 Unibook의 LLM 기반 멀티모달
         Q&amp;A 시스템을 개발하고 있으며, 그 과정에서 출발한 문서 계층 구조 복원
         연구 프로젝트를 이끌고 있습니다. 그 전에는 STANS에서 1년여간 지능형 CCTV를
-        위한 실시간 컴퓨터 비전 모델을 개발했고, 이 모델들은 현재 서울 지하철
-        역사에서 운영되고 있습니다. 그보다 앞서 동서대학교에서 이석호 교수님의
+        위한 실시간 컴퓨터 비전 모델을 개발했고, 그중 일부는 서울 지하철역에 배포되었습니다. 그보다 앞서 동서대학교에서 이석호 교수님의
         지도로 영상 복원을 위한 생성 모델을 주제로 석사와 박사 과정을 마쳤습니다.
       </p>
       <p>
@@ -129,16 +128,11 @@
     <article class="pub">
       <figure><img src="../img/pub-hierarchy.png" alt="" onerror="this.parentElement.style.display='none'; this.closest('.pub').classList.add('nothumb')"></figure>
       <div>
-        <h3>When Can a Second Pass Fix Document Structure? An End-to-End Anatomy of Hierarchy Repair</h3>
+        <h3>Second-Pass Document Hierarchy Repair for PDF Extraction (가제)</h3>
         <p class="authors"><b>Indra Imanuel</b> 외</p>
         <p class="venue">논문 준비 중 (ICDAR 2027 목표) · Laputa, 2026</p>
         <p class="abstract">
-          PDF 추출기가 놓치는 문서 계층 구조를 가벼운 2차 보정 단계로 복원할 수 있을까요? 사람이 만든 레이블 없이 학습한 1억 1,500만 파라미터 규모의
-          자기지도 포인터 모델을 규칙 기반 방법, 26B LLM, 그리고 지도학습
-          기반 4B 멀티모달 SOTA와 세 가지 벤치마크에서 엔드투엔드로
-          비교했습니다. 예비 결과에 따르면 번호가 없는 깊은 단행본 계층 구조는
-          텍스트 기반 방법과 크롭 단위 시각 방법 모두에서 거의 포착되지
-          않습니다.
+          PDF 추출기가 놓치는 문서 계층 구조를 2차 보정 단계로 복원할 수 있을까요? 세 가지 공개 벤치마크와 한국어 교재에서의 엔드투엔드 평가, 사람이 만든 레이블 없이 학습한 자기지도 포인터 모델, LLM·VLM 베이스라인을 구축하고 있습니다.
         </p>
       </div>
     </article>
@@ -179,7 +173,7 @@
       <div class="card">
         <h3>Unibook: 멀티모달 교재 Q&amp;A 시스템</h3>
         <p class="when">Laputa · 2025 – 현재</p>
-        <p>한국 대학 교재를 대상으로 26B MoE VLM을 중심에 둔 LLM 기반 RAG 및 에이전트 워크플로. 에이전트 워크플로와 검색 파이프라인, 데이터베이스를 재설계하고, 로컬 LLM을 벤치마크·양자화했으며, 클라우드 GPU 배포 스택을 담당하고 있습니다.</p>
+        <p>한국 대학 교재를 대상으로 20B+ 오픈 웨이트 멀티모달 MoE 모델을 중심에 둔 LLM 기반 RAG 및 에이전트 워크플로. 에이전트 워크플로를 설계하고, 검색 파이프라인을 수정·튜닝하고, 데이터베이스를 재설계했으며, 정량 평가로 서비스 모델을 선정·검증하고, 클라우드 GPU 배포 스택을 담당하고 있습니다.</p>
         <div class="stack"><span>LLM</span><span>RAG</span><span>Agentic workflow</span><span>vLLM</span><span>Qdrant</span><span>Docker</span></div>
       </div>
       <div class="card">
@@ -218,7 +212,7 @@
   <section id="experience">
     <h2>경력</h2>
     <ul class="exp">
-      <li><time>2025 – 현재</time><div><b>AI Research Engineer</b>, Laputa, Inc. (사회평론 AI 자회사), 서울<br><span class="sub">LLM 연구, 26B MoE VLM 기반 RAG 및 에이전트 워크플로, 데이터베이스, 클라우드 GPU 인프라 담당. 문서 계층 구조 복원 연구 프로젝트 주도.</span></div></li>
+      <li><time>2025 – 현재</time><div><b>AI Research Engineer</b>, Laputa, Inc. (사회평론 AI 자회사), 서울<br><span class="sub">LLM 연구, 20B+ 오픈 웨이트 멀티모달 MoE 모델 기반 RAG 및 에이전트 워크플로, 데이터베이스, 클라우드 GPU 인프라 담당. 문서 계층 구조 복원 연구 프로젝트 주도.</span></div></li>
       <li><time>2024 – 2025</time><div><b>AI Research Engineer</b>, STANS, Inc. (MDS Intelligence 자회사), 서울<br><span class="sub">지능형 CCTV용 컴퓨터 비전 모델(객체 탐지, 군중 계수, 폭력 감지), 자동 레이블링 파이프라인, 양자화 및 배포.</span></div></li>
       <li><time>2019 – 2024</time><div><b>대학원 연구원</b>, 영상처리연구실, 동서대학교, 부산<br><span class="sub">지도교수: 이석호 교수. 영상 복원을 위한 생성 모델 연구, 제1저자 논문 5편, 한국연구재단(NRF)·ETRI·동서대학교 연구비 지원.</span></div></li>
       <li><time>2019</time><div><b>Android 앱 개발자</b>, PT. Mat Ali Teknologi, 수라바야<br><span class="sub">Android 채팅 애플리케이션 (Kotlin, Node.js).</span></div></li>
@@ -230,7 +224,7 @@
     <ul class="exp">
       <li><time>2021 – 2024</time><div><b>컴퓨터공학 박사</b>, 동서대학교, 부산<br><span class="sub">학위논문: Image Compression and Demosaicing based on Denoising Diffusion Null-Space Model. GPA 4.33/4.50.</span></div></li>
       <li><time>2019 – 2021</time><div><b>컴퓨터공학 석사</b>, 동서대학교, 부산<br><span class="sub">학위논문: Super-Resolution with Adversarial Loss on the Feature Maps of the Generated High-Resolution Image. GPA 4.50/4.50.</span></div></li>
-      <li><time>2015 – 2019</time><div><b>정보공학 학사 (B.Comp.)</b>, University of Surabaya<br><span class="sub">학위논문: Committee Management System for Dept. of Informatics in University of Surabaya. 최우등 졸업(summa cum laude), 학과 수석. GPA 3.94/4.00.</span></div></li>
+      <li><time>2015 – 2019</time><div><b>컴퓨터공학 학사 (B.Comp.)</b>, University of Surabaya<br><span class="sub">학위논문: Committee Management System for Dept. of Informatics in University of Surabaya. 최우등 졸업(summa cum laude), 학과 수석. GPA 3.94/4.00.</span></div></li>
     </ul>
   </section>
 

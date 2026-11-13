@@ -93,9 +93,7 @@
       <p>
         At Laputa I build Unibook's LLM-based multimodal Q&amp;A system over
         Korean university textbooks, and I lead a research project on
-        document-hierarchy repair that grew out of that work. Before this
-        I spent a year at STANS building real-time computer-vision models
-        for intelligent CCTV that now run at Seoul subway stations,
+        document-hierarchy repair that grew out of that work. Before this I spent over a year at STANS building real-time computer-vision models for intelligent CCTV, some of which were deployed at Seoul subway stations,
         and before that I did my M.Sc. and Ph.D. at Dongseo University
         with Prof. Suk-Ho Lee on generative models for image restoration.
       </p>
@@ -168,17 +166,11 @@
     <article class="pub">
       <figure><img src="img/pub-hierarchy.png" alt="" onerror="this.parentElement.style.display='none'; this.closest('.pub').classList.add('nothumb')"></figure>
       <div>
-        <h3>When Can a Second Pass Fix Document Structure? An End-to-End Anatomy of Hierarchy Repair</h3>
+        <h3>Second-Pass Document Hierarchy Repair for PDF Extraction (working title)</h3>
         <p class="authors"><b>Indra Imanuel</b>, et al.</p>
         <p class="venue">Manuscript in preparation (ICDAR 2027 target) · Laputa, 2026</p>
         <p class="abstract">
-          Can a cheap second pass repair the document hierarchy that PDF
-          extractors get wrong? A self-supervised 115M pointer model
-          trained without human labels, benchmarked end-to-end against
-          rules, a 26B LLM, and the supervised 4B multimodal state of the
-          art on three benchmarks. Preliminary results show deep,
-          unnumbered book hierarchy is largely invisible to text-side and
-          crop-level methods alike.
+          Can a second pass repair the document hierarchy that PDF extractors get wrong? An end-to-end evaluation on three public benchmarks and Korean textbooks, a self-supervised pointer model trained without human labels, and LLM/VLM baselines.
         </p>
       </div>
     </article>
@@ -222,7 +214,7 @@
       <div class="card">
         <h3>Unibook: multimodal textbook Q&amp;A system</h3>
         <p class="when">Laputa · 2025 – present</p>
-        <p>LLM-based RAG and agentic workflow around a 26B VLM MoE model over Korean university textbooks: redesigned the agentic workflow &amp retrieval pipeline and database, benchmarked and quantized local LLMs, and own the cloud-GPU deployment stack.</p>
+        <p>LLM-based RAG and agentic workflow around a 20B+ open-weight multimodal MoE model over Korean university textbooks: designed the agentic workflow, fixed and tuned the retrieval pipeline, redesigned the database, chose and validated the production model by measurement, and own the cloud-GPU deployment stack.</p>
         <div class="stack"><span>LLM</span><span>RAG</span><span>Agentic workflow</span><span>vLLM</span><span>Qdrant</span><span>Docker</span></div>
       </div>
       <div class="card">
@@ -261,7 +253,7 @@
   <section id="experience">
     <h2>Experience</h2>
     <ul class="exp">
-      <li><time>2025 – present</time><div><b>AI Research Engineer</b>, Laputa, Inc. (AI subsidiary of Sapyoung Publisher), Seoul<br><span class="sub">LLM research, the RAG and agentic workflow around a 26B VLM MoE model, database, and cloud-GPU infrastructure; lead of the document-hierarchy repair project.</span></div></li>
+      <li><time>2025 – present</time><div><b>AI Research Engineer</b>, Laputa, Inc. (AI subsidiary of Sapyoung Publisher), Seoul<br><span class="sub">LLM research, the RAG and agentic workflow around a 20B+ open-weight multimodal MoE model, database, and cloud-GPU infrastructure; lead of the document-hierarchy repair project.</span></div></li>
       <li><time>2024 – 2025</time><div><b>AI Research Engineer</b>, STANS, Inc. (MDS Intelligence subsidiary), Seoul<br><span class="sub">Computer-vision models for intelligent CCTV: detection, crowd counting, violence detection; auto-labeling pipelines; quantization and deployment.</span></div></li>
       <li><time>2019 – 2024</time><div><b>Graduate Student Researcher</b>, Image Processing Lab, Dongseo University, Busan<br><span class="sub">Advisor: Prof. Suk-Ho Lee. Generative models for image restoration; five first-author papers; funded by NRF, ETRI, and Dongseo grants.</span></div></li>
       <li><time>2019</time><div><b>Android App Developer</b>, PT. Mat Ali Teknologi, Surabaya<br><span class="sub">Android chat application (Kotlin, Node.js).</span></div></li>

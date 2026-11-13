@@ -82,21 +82,12 @@
     <article class="pub">
       <figure><img src="img/pub-hierarchy.png" alt="" onerror="this.parentElement.style.display='none'; this.closest('.pub').classList.add('nothumb')"></figure>
       <div>
-        <h3>When Can a Second Pass Fix Document Structure? An End-to-End Anatomy of Hierarchy Repair</h3>
+        <h3>Second-Pass Document Hierarchy Repair for PDF Extraction (working title)</h3>
         <p class="authors"><b>Indra Imanuel</b>, et al.</p>
         <p class="venue">In preparation for ICDAR 2027 · Laputa, Inc.; I proposed and lead the project</p>
         <p class="abstract">
           PDF extractors recover text well and document hierarchy poorly.
-          We ask whether a cheap second
-          pass can repair it: a self-supervised 115M pointer model trained
-          on pseudo-labels mined from section numbering and embedded PDF
-          outlines — no human annotation — evaluated end-to-end against
-          deterministic rules, a 26B LLM, and the supervised 4B multimodal
-          state of the art on three benchmarks. Preliminary results show
-          that deep, unnumbered book hierarchy is largely invisible to
-          text-side and crop-level methods alike, and point to cheap
-          structural signals as the more promising route than larger
-          models.
+          This project builds an end-to-end evaluation on three public benchmarks (Comp-HRDoc, HiPS, DocHieNet) and Korean textbooks, a self-supervised pointer model trained on pseudo-labels mined from section numbering and embedded PDF outlines with no human annotation, and LLM/VLM baselines.
         </p>
       </div>
     </article>
